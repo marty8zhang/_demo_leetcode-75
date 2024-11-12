@@ -5,9 +5,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "lint": "eslint \"**/*.?(c|m)js\" --fix",
-    "format": "prettier \"**/*.?(c|m)js\" --write",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "js:lint-and-format": "eslint \"**/*.?(c|m)js\" --fix && prettier \"**/*.?(c|m)js\" --write",
+    "js:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",

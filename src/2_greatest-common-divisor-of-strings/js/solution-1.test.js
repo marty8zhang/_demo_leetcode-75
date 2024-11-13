@@ -13,7 +13,7 @@ describe('gcdOfStrings()', () => {
     expect(gcdOfStrings('AAAAA', 'A')).toBe('A');
   });
 
-  it('should return the expected result when the is only one char keeping repeating in both strings with uneven lengths between them', () => {
+  it('should return the expected result when the is only one char keeps repeating in both strings with uneven lengths between them', () => {
     expect(gcdOfStrings('A'.repeat(7), 'A'.repeat(4))).toBe('A');
   });
 

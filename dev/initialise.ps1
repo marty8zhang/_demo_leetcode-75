@@ -36,4 +36,9 @@ Push-Location $solutionTestsDir
 dotnet add package FluentAssertions
 Pop-Location
 
-Write-Host -ForegroundColor Green -BackgroundColor Black "# Done!$( $PSStyle.Reset )"
+Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Adding the newly created projects to the solution..."
+
+dotnet sln add $solutionDir $solutionTestsDir
+
+Write-Host -ForegroundColor Green -BackgroundColor Black "# Done!"
+Write-Host -ForegroundColor Magenta -BackgroundColor Black "# Remember to re-open the solution (`LeetCode75.sln`) in your IDE.$( $PSStyle.Reset )"

@@ -1,7 +1,7 @@
 # IDEs
 .idea
 .run
-Folder.DotSettings.user
+*.DotSettings.user
 
 # Node.js
 node_modules

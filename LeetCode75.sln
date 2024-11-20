@@ -21,45 +21,45 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\2_greatest-c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\2_greatest-common-divisor-of-strings\csharp\Program.Tests\Program.Tests.csproj", "{7C99D49C-9E84-4034-982D-B572407ED1DB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Kids-with-the-greatest-number-of-candies", "3_Kids-with-the-greatest-number-of-candies", "{798F7942-F7A5-4800-ABE6-58C1463A212F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_kids-with-the-greatest-number-of-candies", "3_kids-with-the-greatest-number-of-candies", "{798F7942-F7A5-4800-ABE6-58C1463A212F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{10555AA4-B3C8-49D2-AD6A-5275BD6D8115}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\3_Kids-with-the-greatest-number-of-candies\csharp\Program\Program.csproj", "{40513EDB-87E8-4B20-AA16-2C8B325F7323}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\3_kids-with-the-greatest-number-of-candies\csharp\Program\Program.csproj", "{40513EDB-87E8-4B20-AA16-2C8B325F7323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\3_Kids-with-the-greatest-number-of-candies\csharp\Program.Tests\Program.Tests.csproj", "{61E6BB97-B157-42D5-BD9B-D5BB7A7CB6C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\3_kids-with-the-greatest-number-of-candies\csharp\Program.Tests\Program.Tests.csproj", "{61E6BB97-B157-42D5-BD9B-D5BB7A7CB6C6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_can_place_flowers", "4_can_place_flowers", "{10C02614-20E6-45BB-B10D-AA4F3A001218}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_can-place-flowers", "4_can-place-flowers", "{10C02614-20E6-45BB-B10D-AA4F3A001218}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{0BFA1D2B-16AD-460D-9B5A-049FDD688566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\4_can_place_flowers\csharp\Program\Program.csproj", "{DD8D6AA7-FCEB-4E52-88E7-68C3F33438E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\4_can-place-flowers\csharp\Program\Program.csproj", "{DD8D6AA7-FCEB-4E52-88E7-68C3F33438E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\4_can_place_flowers\csharp\Program.Tests\Program.Tests.csproj", "{2924DCD1-B855-4537-B9E2-02358312D3AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\4_can-place-flowers\csharp\Program.Tests\Program.Tests.csproj", "{2924DCD1-B855-4537-B9E2-02358312D3AE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_reverse_vowels_of_a_string", "5_reverse_vowels_of_a_string", "{A12C905D-279C-4A26-B451-90EE385D08E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_reverse-vowels-of-a-string", "5_reverse-vowels-of-a-string", "{A12C905D-279C-4A26-B451-90EE385D08E1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{23BC28E1-60C9-40FC-B1A7-A45149B6F41E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\5_reverse_vowels_of_a_string\csharp\Program\Program.csproj", "{CB698161-DFD6-4705-8C24-E90E2DF8173B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\5_reverse-vowels-of-a-string\csharp\Program\Program.csproj", "{CB698161-DFD6-4705-8C24-E90E2DF8173B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\5_reverse_vowels_of_a_string\csharp\Program.Tests\Program.Tests.csproj", "{12CB9257-7165-4BDF-8D1A-F14B4D5E8B93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\5_reverse-vowels-of-a-string\csharp\Program.Tests\Program.Tests.csproj", "{12CB9257-7165-4BDF-8D1A-F14B4D5E8B93}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6_reverse_words_in_a_string", "6_reverse_words_in_a_string", "{EBBF33AF-D4FE-401E-8DC8-8E4B5B2384C4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6_reverse-words-in-a-string", "6_reverse-words-in-a-string", "{EBBF33AF-D4FE-401E-8DC8-8E4B5B2384C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{C784B33E-59F4-4EAF-9F32-7ABAAFB23A7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\6_reverse_words_in_a_string\csharp\Program\Program.csproj", "{CA282AAD-70C4-4DB3-86BC-7319438A8742}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\6_reverse-words-in-a-string\csharp\Program\Program.csproj", "{CA282AAD-70C4-4DB3-86BC-7319438A8742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\6_reverse_words_in_a_string\csharp\Program.Tests\Program.Tests.csproj", "{F159291C-2AFF-463A-B6F1-08981854AE44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\6_reverse-words-in-a-string\csharp\Program.Tests\Program.Tests.csproj", "{F159291C-2AFF-463A-B6F1-08981854AE44}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7_product_of_array_except_self", "7_product_of_array_except_self", "{64D3AEFB-DC5D-4F03-8C89-9B2A4CFED6E4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7_product-of-array-except-self", "7_product-of-array-except-self", "{64D3AEFB-DC5D-4F03-8C89-9B2A4CFED6E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{950F1CF4-7AF4-433E-9AE3-4B231E0BB580}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\7_product_of_array_except_self\csharp\Program\Program.csproj", "{234704AE-320A-4877-AF07-C19DF8729D9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\7_product-of-array-except-self\csharp\Program\Program.csproj", "{234704AE-320A-4877-AF07-C19DF8729D9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\7_product_of_array_except_self\csharp\Program.Tests\Program.Tests.csproj", "{88983226-86F8-40B2-AA2C-CA6F816BEA7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\7_product-of-array-except-self\csharp\Program.Tests\Program.Tests.csproj", "{88983226-86F8-40B2-AA2C-CA6F816BEA7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

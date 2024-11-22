@@ -1,7 +1,7 @@
 import maxArea from './solution-1.js';
 
 describe('`maxArea()`', () => {
-  it('should return `0`, when there are only two heights and one of it is `0`', () => {
+  it('should return `0`, when there are only two heights and one of them is `0`', () => {
     expect(maxArea([0, 10])).toBe(0);
   });
 

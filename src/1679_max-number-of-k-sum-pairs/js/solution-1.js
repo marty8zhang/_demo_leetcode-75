@@ -12,24 +12,27 @@ function maxOperations(nums, k) {
       right--;
     }
 
-    let index = nums.indexOf(k - nums[left], left + 1);
-    if (index > 0) {
+    const indexNeeded = nums.indexOf(k - nums[left], left + 1);
+    if (indexNeeded > 0) {
       counter++;
-      nums.splice(index, 1);
+      nums.splice(indexNeeded, 1);
       nums.splice(left, 1);
       right -= 2;
     } else {
       left++;
     }
 
-    index = nums.indexOf(k - nums[right]);
-    if (index >= 0 && index < right) {
-      counter++;
-      nums.splice(right, 1);
-      nums.splice(index, 1);
-      right -= 2;
-    } else {
-      right--;
+    let i = right - 1;
+    while (i >= left) {
+      if (nums[i] + nums[right] === k) {
+        counter++;
+        nums.splice(right, 1);
+        nums.splice(i, 1);
+        right -= 2;
+        i = right - 1;
+      } else {
+        i--;
+      }
     }
   }
 

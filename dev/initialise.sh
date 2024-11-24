@@ -36,7 +36,7 @@ printf "%s\n" "${YELLOW}# Creating the JavaScript project...${NORMAL}"
 
 SOLUTION_DIRECTORY="${PROBLEM_DIRECTORY}/js"
 
-mkdir --parents "$SOLUTION_DIRECTORY"
+mkdir -p "$SOLUTION_DIRECTORY"
 touch "${PROBLEM_DIRECTORY}/README.md"
 touch "${SOLUTION_DIRECTORY}/solution-1.js"
 touch "${SOLUTION_DIRECTORY}/solution-1.test.js"

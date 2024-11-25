@@ -5,7 +5,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "js:initialise": "./dev/initialise.sh",
+    "initialise": "./dev/initialise.sh",
     "js:lint-and-format": "eslint \"**/*.?(c|m)js\" --fix && prettier \"**/*.?(c|m)js\" --write",
     "js:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },

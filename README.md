@@ -20,15 +20,15 @@ dotnet test .\LeetCode75.sln
 # Helper Tools
 
 Some scripts have been added to help with initialising JavaScript/.NET
-projects/files for each LeetCode 75 problem. E.g.,
+projects/files for each LeetCode 75 problem.
 
-## JavaScript
+## Bash (Linux/macOS)
 
 ```shell
-pnpm js:initialise
+pnpm initialise 1_merge-strings-alternately
 ```
 
-## PowerShell
+## PowerShell (Windows)
 
 ```powershell
 .\dev\initialise.ps1 1_merge-strings-alternately

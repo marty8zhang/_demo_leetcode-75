@@ -2,9 +2,10 @@
 set -Eeuo pipefail
 
 NORMAL=$(tput sgr0)
-GREEN=$(tput setaf 2)
 RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
+MAGENTA=$(tput setaf 5)
 
 printf "%s\n" "${YELLOW}# Checking the folder structure...${NORMAL}"
 
@@ -34,11 +35,31 @@ fi
 
 printf "%s\n" "${YELLOW}# Creating the JavaScript project...${NORMAL}"
 
-SOLUTION_DIRECTORY="${PROBLEM_DIRECTORY}/js"
+SOLUTION_DIRECTORY_JS="${PROBLEM_DIRECTORY}/js"
 
-mkdir -p "$SOLUTION_DIRECTORY"
+mkdir -p "$SOLUTION_DIRECTORY_JS"
 touch "${PROBLEM_DIRECTORY}/README.md"
-touch "${SOLUTION_DIRECTORY}/solution-1.js"
-touch "${SOLUTION_DIRECTORY}/solution-1.test.js"
+touch "${SOLUTION_DIRECTORY_JS}/solution-1.js"
+touch "${SOLUTION_DIRECTORY_JS}/solution-1.test.js"
+
+printf "%s\n" "${YELLOW}# Creating the C# projects...${NORMAL}"
+
+SOLUTION_DIRECTORY_CS="${PROBLEM_DIRECTORY}/csharp/Program"
+SOLUTION_DIRECTORY_CS_TESTS="${SOLUTION_DIRECTORY_CS}.Tests"
+
+dotnet new console -o "$SOLUTION_DIRECTORY_CS"
+dotnet new xunit -o "$SOLUTION_DIRECTORY_CS_TESTS"
+dotnet add "$SOLUTION_DIRECTORY_CS_TESTS" reference "$SOLUTION_DIRECTORY_CS"
+
+printf "%s\n" "${YELLOW}# Adding C# unit testing dependencies...${NORMAL}"
+
+cd "$SOLUTION_DIRECTORY_CS_TESTS"
+dotnet add package FluentAssertions
+cd -
+
+printf "%s\n" "${YELLOW}# Adding the newly created C# projects to the .NET solution...${NORMAL}"
+
+dotnet sln add "$SOLUTION_DIRECTORY_CS" "$SOLUTION_DIRECTORY_CS_TESTS"
 
 printf "%s\n" "${GREEN}# Done!${NORMAL}"
+printf "%s\n" "${MAGENTA}# Re-opening the solution (``LeetCode75.sln``) from the IDE might be needed.${NORMAL}"

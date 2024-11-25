@@ -1,4 +1,4 @@
-import maxOperations from './solution-1.js';
+import maxOperations from './solution-2.js';
 
 describe('`maxOperations()`', () => {
   it('should return `0`, when there is only one number in the given array', () => {

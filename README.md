@@ -25,11 +25,12 @@ projects/files for each LeetCode 75 problem.
 ## Bash (Linux/macOS)
 
 ```shell
-pnpm initialise 1_merge-strings-alternately
+pnpm initialise:js 1_merge-strings-alternately
+pnpm initialise:csharp 1_merge-strings-alternately
 ```
 
 ## PowerShell (Windows)
 
 ```powershell
-.\dev\initialise.ps1 1_merge-strings-alternately
+.\dev\initialise-csharp.ps1 1_merge-strings-alternately
 ```

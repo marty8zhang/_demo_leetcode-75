@@ -18,6 +18,11 @@ describe('`maxOperations()`', () => {
   });
 
   it('should return the expected result, when there are several pairs in the given array and they can be summed up to the given `k`', () => {
-    expect(maxOperations([1, 2, 4, 7, 101, 3, 5, 3], 6)).toBe(3);
+    expect(
+      maxOperations(
+        [2, 5, 4, 4, 1, 3, 4, 4, 1, 4, 4, 1, 2, 1, 2, 2, 3, 2, 4, 2],
+        3,
+      ),
+    ).toBe(4);
   });
 });

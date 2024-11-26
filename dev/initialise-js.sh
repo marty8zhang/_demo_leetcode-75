@@ -35,6 +35,6 @@ printf "%s\n" "${YELLOW}# Creating the JavaScript project...${NORMAL}"
 mkdir -p "$DIRECTORY_PROBLEM_JS"
 touch "${DIRECTORY_PROBLEM}/README.md"
 touch "${DIRECTORY_PROBLEM_JS}/solution-1.js"
-touch "${DIRECTORY_PROBLEM_JS}/solution-1.test.js"
+touch "${DIRECTORY_PROBLEM_JS}/solutions.test.js"
 
 printf "%s\n" "${GREEN}# Done!${NORMAL}"

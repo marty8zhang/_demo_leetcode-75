@@ -1,4 +1,4 @@
-import findMaxAverage from './solution-1.js';
+import findMaxAverage from './solution-2.js';
 
 describe('`findMaxAverage()`', () => {
   it('should return the same integer from the given array, when both `k` and the length of `nums` equal `1`', () => {

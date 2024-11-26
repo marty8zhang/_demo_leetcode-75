@@ -1,8 +1,9 @@
+/*
+ * Note: This solution won't pass the complexity check.
+ */
 function findMaxAverage(nums, k) {
   const l = nums.length;
-  let maxSum = -10 ^ 4;
-
-  if (k === l) return nums.reduce((sum, v) => (sum += v), 0) / l;
+  let maxSum = Number.MIN_SAFE_INTEGER;
 
   for (let i = 0; i < l - k + 1; i++) {
     let sum = 0;

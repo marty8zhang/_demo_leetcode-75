@@ -109,13 +109,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\1679_max-num
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\1679_max-number-of-k-sum-pairs\csharp\Program.Tests\Program.Tests.csproj", "{EB01975F-0E95-43B2-9982-16F039EB2AED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "643_maximum_average_subarray_1", "643_maximum_average_subarray_1", "{7367259A-4483-44CB-9FC5-64732070AC30}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "643_maximum-average-subarray-1", "643_maximum-average-subarray-1", "{7367259A-4483-44CB-9FC5-64732070AC30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{81949335-692F-4C56-9104-390C13D314BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\643_maximum_average_subarray_1\csharp\Program\Program.csproj", "{AD593FC5-85E4-4DC6-B4BD-A0D8018F2E79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\643_maximum-average-subarray-1\csharp\Program\Program.csproj", "{AD593FC5-85E4-4DC6-B4BD-A0D8018F2E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\643_maximum_average_subarray_1\csharp\Program.Tests\Program.Tests.csproj", "{EC18303E-605C-40E7-AD75-D2C92F57BEB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\643_maximum-average-subarray-1\csharp\Program.Tests\Program.Tests.csproj", "{EC18303E-605C-40E7-AD75-D2C92F57BEB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

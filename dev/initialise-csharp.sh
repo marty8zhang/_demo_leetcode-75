@@ -8,16 +8,16 @@ printf "%s\n" "${YELLOW}# Checking the folder structure...${NORMAL}"
 if [ ! -f "package.json" ]
   then
     printf "%s\n" "${RED}Error: Please run this script from the project root." 1>&2
-    printf "Usage: dev\initialise-csharp.sh <subdirectory>\n" 1>&2
-    printf "%s\n" "Example: dev\initialise-csharp.sh 1_merge-strings-alternately${NORMAL}" 1>&2
+    printf "Usage: dev/initialise-csharp.sh <subdirectory>\n" 1>&2
+    printf "%s\n" "Example: dev/initialise-csharp.sh 1_merge-strings-alternately${NORMAL}" 1>&2
     exit 1
 fi
 
 if [ $# -eq 0 ]
   then
     printf "%s\n" "${RED}Error: A subdirectory of a LeetCode problem should be provided." 1>&2
-    printf "Usage: dev\initialise-csharp.sh <subdirectory>\n" 1>&2
-    printf "%s\n" "Example: dev\initialise-csharp.sh 1_merge-strings-alternately${NORMAL}" 1>&2
+    printf "Usage: dev/initialise-csharp.sh <subdirectory>\n" 1>&2
+    printf "%s\n" "Example: dev/initialise-csharp.sh 1_merge-strings-alternately${NORMAL}" 1>&2
     exit 1
 fi
 

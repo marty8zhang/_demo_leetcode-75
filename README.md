@@ -32,5 +32,6 @@ pnpm initialise:csharp 1_merge-strings-alternately
 ## PowerShell (Windows)
 
 ```powershell
-.\dev\initialise-csharp.ps1 1_merge-strings-alternately
+dev\initialise-js.ps1 1_merge-strings-alternately
+dev\initialise-csharp.ps1 1_merge-strings-alternately
 ```

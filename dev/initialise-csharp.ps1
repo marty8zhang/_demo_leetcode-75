@@ -1,44 +1,51 @@
-﻿Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Checking the folder structure..."
+﻿$ErrorActionPreference = 'Stop'
+$PSNativeCommandUseErrorActionPreference = $true
 
-if (!(Test-Path -Path ".\package.json"))
+try
 {
-    throw "Error: Please run this script from the project root. E.g., ``.\dev\initialise.ps1 1_merge-strings-alternately``."
+    . "$( $PSScriptRoot )\pre-flight-check.ps1" $args
+}
+catch
+{
+    Write-Error -Message $_ -ErrorAction Stop
 }
 
-$problemSubDir = $args[0]
-if (!$problemSubDir)
+$dirProblem = ".\src\$( $args[0] )"
+$dirProblemCS = "$( $dirProblem )\csharp"
+if (Test-Path -Path $( $dirProblemCS ))
 {
-    throw "Error: A subdirectory of a LeetCode problem should be provided."
+    Write-Error -Message "Error: The C# projects directory already exists." -ErrorAction Stop
 }
 
-$problemDir = ".\src\$( $problemSubDir )"
-if (!(Test-Path -Path "$( $problemDir )\README.md"))
+$dirSolutionCS = "$( $dirProblemCS )\Program"
+$solutionTestsDir = "$( $dirSolutionCS ).Tests"
+if ((Test-Path -Path $dirSolutionCS) -or (Test-Path -Path $solutionTestsDir))
 {
-    throw "Error: Could not find the problem `README.md`. Either create the file or check if the provided path name is correct or not."
+    Write-Error -Message "Error: The directory(ies) ``$( $dirSolutionCS )`` and/or ``$( $solutionTestsDir )`` already exist(s)." -ErrorAction Stop
 }
 
-$solutionDir = ".\src\$( $problemSubDir )\csharp\Program"
-$solutionTestsDir = "$( $solutionDir ).Tests"
-if ((Test-Path -Path $solutionDir) -or (Test-Path -Path $solutionTestsDir))
+Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Creating the C# projects..."
+
+New-Item -Path $dirProblem -Name "js" -ItemType "directory"
+
+if (!(Test-Path -Path "$( $dirProblem )\README.md"))
 {
-    throw "Error: The directory(ies) ``$( $solutionDir )`` and/or ``$( $solutionTestsDir )`` already exist(s)."
+    New-Item -Path $dirProblem -Name "README.md"
 }
 
-Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Creating C# projects..."
-
-dotnet new console -o $solutionDir
+dotnet new console -o $dirSolutionCS
 dotnet new xunit -o $solutionTestsDir
-dotnet add $solutionTestsDir reference $solutionDir
+dotnet add $solutionTestsDir reference $dirSolutionCS
 
-Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Adding unit testing dependencies..."
+Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Adding C# unit testing dependencies..."
 
 Push-Location $solutionTestsDir
 dotnet add package FluentAssertions
 Pop-Location
 
-Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Adding the newly created projects to the solution..."
+Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Adding the newly created C# projects to the .NET solution..."
 
-dotnet sln add $solutionDir $solutionTestsDir
+dotnet sln add $dirSolutionCS $solutionTestsDir
 
 Write-Host -ForegroundColor Green -BackgroundColor Black "# Done!"
-Write-Host -ForegroundColor Magenta -BackgroundColor Black "# Remember to re-open the solution (`LeetCode75.sln`) in your IDE.$( $PSStyle.Reset )"
+Write-Host -ForegroundColor Magenta -BackgroundColor Black "# Re-opening the solution (``LeetCode75.sln``) from the IDE might be needed.$( $PSStyle.Reset )"

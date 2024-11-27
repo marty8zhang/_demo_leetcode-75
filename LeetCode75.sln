@@ -117,6 +117,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\643_maximum-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\643_maximum-average-subarray-1\csharp\Program.Tests\Program.Tests.csproj", "{EC18303E-605C-40E7-AD75-D2C92F57BEB6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1456_maximum-number-of-vowels-in-a-substring-of-given-length", "1456_maximum-number-of-vowels-in-a-substring-of-given-length", "{72C553B3-E7CD-4506-B13A-C7FCFEBD5302}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{4618DFF7-2202-4734-BBE1-90706E840FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\1456_maximum-number-of-vowels-in-a-substring-of-given-length\csharp\Program\Program.csproj", "{3FCBE113-39B9-47DE-A9B4-3F0E904BA017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Tests", "src\1456_maximum-number-of-vowels-in-a-substring-of-given-length\csharp\Program.Tests\Program.Tests.csproj", "{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -238,6 +246,14 @@ Global
 		{EC18303E-605C-40E7-AD75-D2C92F57BEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC18303E-605C-40E7-AD75-D2C92F57BEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC18303E-605C-40E7-AD75-D2C92F57BEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCBE113-39B9-47DE-A9B4-3F0E904BA017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCBE113-39B9-47DE-A9B4-3F0E904BA017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCBE113-39B9-47DE-A9B4-3F0E904BA017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCBE113-39B9-47DE-A9B4-3F0E904BA017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3925DF05-96F4-4B5C-8B4B-4198983F782D} = {7A0634AD-F7FC-4E09-9BF5-677314379190}
@@ -296,5 +312,9 @@ Global
 		{81949335-692F-4C56-9104-390C13D314BA} = {7367259A-4483-44CB-9FC5-64732070AC30}
 		{AD593FC5-85E4-4DC6-B4BD-A0D8018F2E79} = {81949335-692F-4C56-9104-390C13D314BA}
 		{EC18303E-605C-40E7-AD75-D2C92F57BEB6} = {81949335-692F-4C56-9104-390C13D314BA}
+		{72C553B3-E7CD-4506-B13A-C7FCFEBD5302} = {7A0634AD-F7FC-4E09-9BF5-677314379190}
+		{4618DFF7-2202-4734-BBE1-90706E840FC8} = {72C553B3-E7CD-4506-B13A-C7FCFEBD5302}
+		{3FCBE113-39B9-47DE-A9B4-3F0E904BA017} = {4618DFF7-2202-4734-BBE1-90706E840FC8}
+		{68E9BC49-E7E0-4ADE-AAC4-BF1BA2AAF0CE} = {4618DFF7-2202-4734-BBE1-90706E840FC8}
 	EndGlobalSection
 EndGlobal

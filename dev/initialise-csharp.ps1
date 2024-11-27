@@ -26,7 +26,7 @@ if ((Test-Path -Path $dirSolutionCS) -or (Test-Path -Path $solutionTestsDir))
 
 Write-Host -ForegroundColor Yellow -BackgroundColor Black "# Creating the C# projects..."
 
-New-Item -Path $dirProblem -Name "js" -ItemType "directory"
+New-Item -Path $dirProblem -Name "csharp" -ItemType "directory"
 
 if (!(Test-Path -Path "$( $dirProblem )\README.md"))
 {

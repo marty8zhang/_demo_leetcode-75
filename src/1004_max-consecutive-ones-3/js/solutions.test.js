@@ -1,4 +1,4 @@
-import longestOnes from './solution-1.js';
+import longestOnes from './solution-2.js';
 
 describe('`longestOnes()`', () => {
   it('should return `0`, when the length of `nums` is `0`', () => {

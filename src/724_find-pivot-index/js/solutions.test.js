@@ -1,4 +1,4 @@
-import pivotIndex from './solution-1.js';
+import pivotIndex from './solution-2.js';
 
 describe('`pivotIndex()`', () => {
   it('should return `-1`, when there is no pivot index in `nums`', () => {

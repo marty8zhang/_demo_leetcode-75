@@ -1,4 +1,4 @@
-import findDifference from './solution-1.js';
+import findDifference from './solution-2.js';
 
 describe('`findDifference()`', () => {
   it('should return both arrays, when all of their items are distinct', () => {

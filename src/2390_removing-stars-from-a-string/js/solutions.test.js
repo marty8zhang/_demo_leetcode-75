@@ -1,4 +1,5 @@
-import removeStars from './solution-1.js';
+// import removeStars from './solution-1.js';
+import removeStars from './solution-2.js';
 
 describe('`removeStars()`', () => {
   it('should return the same string, when there is no star in the given one', () => {

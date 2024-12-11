@@ -1,5 +1,7 @@
 /*
- * Note: This solution fails the complexity check.
+ * Notes:
+ *   - This is not a stack solution.
+ *   - This solution fails the complexity check.
  */
 function removeStars(s) {
   for (let i = 1; i < s.length; i++) {

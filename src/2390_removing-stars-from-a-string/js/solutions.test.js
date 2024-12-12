@@ -15,7 +15,7 @@ describe('`removeStars()`', () => {
     expect(removeStars('the***reare**stars**')).toBe('reasta');
   });
 
-  it('should return the expected result, when there are repeating stars in the given string, but not all can be removed in a sequence order', () => {
+  it('should return the expected result, when there are repeating stars in the given string, but not all can be removed in a sequential order', () => {
     expect(removeStars('t*herea*re***stars**')).toBe('hersta');
   });
 });

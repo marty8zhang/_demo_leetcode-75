@@ -1,6 +1,5 @@
 /*
- * Note: This solution only works with a single-digit `k`, hence it fails
- * LeetCode tests.
+ * Note: This isn't a stack solution.
  */
 export function decodeString(s) {
   let result = '';
@@ -20,23 +19,30 @@ export function decodeString(s) {
 function decoding(s, i) {
   if (isNaN(s[i])) throw new Error('Invalid encoded string start.');
 
+  let j = i + 1;
+  let times = s[i];
+  for (; j < s.length; j++) {
+    if (isNaN(s[j])) break;
+    times = `${times}${s[j]}`;
+  }
+
   let decodingString = '';
-  for (let j = i + 2; j < s.length; j++) {
-    if (!isNaN(s[j])) {
-      const nestedDecodingResult = decoding(s, j);
+  for (let k = j + 1; k < s.length; k++) {
+    if (!isNaN(s[k])) {
+      const nestedDecodingResult = decoding(s, k);
       decodingString = `${decodingString}${nestedDecodingResult.decodedString}`;
-      j += nestedDecodingResult.originalLength - 1;
+      k += nestedDecodingResult.originalLength - 1;
       continue;
     }
 
-    if (s[j] === ']') {
+    if (s[k] === ']') {
       return {
-        decodedString: decodingString.repeat(s[i]),
-        originalLength: j - i + 1,
+        decodedString: decodingString.repeat(Number.parseInt(times)),
+        originalLength: k - i + 1,
       };
     }
 
-    decodingString = `${decodingString}${s[j]}`;
+    decodingString = `${decodingString}${s[k]}`;
   }
 
   throw new Error('Invalid encoded string end.');

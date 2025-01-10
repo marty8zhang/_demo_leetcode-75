@@ -22,6 +22,8 @@ describe('`decodeString()`', () => {
   });
 
   it('should return the decoded string, when there are nested decoding needed', () => {
-    expect(decodeString('a2[bc3[de]f]g')).toBe('abcdededefbcdededefg');
+    expect(decodeString('a2[bc13[de]f]g')).toBe(
+      ['a', ['bc', 'de'.repeat(13), 'f'].join('').repeat(2), 'g'].join(''),
+    );
   });
 });

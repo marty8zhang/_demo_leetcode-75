@@ -34,7 +34,7 @@ describe('`asteroidCollision()`', () => {
     expect(asteroidCollision([-1, 2, -3])).toEqual([-1, -3]);
   });
 
-  it('should return the expected result, when there are a series of collisions, and only the last asteroid is left', () => {
+  it('should return the expected result, when most asteroids go right, but only the last biggest one goes left', () => {
     expect(asteroidCollision([122, 98, 100, -123])).toEqual([-123]);
   });
 

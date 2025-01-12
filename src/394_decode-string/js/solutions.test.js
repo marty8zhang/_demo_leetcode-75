@@ -1,4 +1,5 @@
-import { decodeString } from './solution-1.js';
+// import { decodeString } from './solution-1.js';
+import { decodeString } from './solution-2.js';
 
 describe('`decodeString()`', () => {
   it('should return the original string, when there is nothing to decode', () => {

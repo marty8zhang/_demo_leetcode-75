@@ -1,4 +1,5 @@
-import { RecentCounter } from './solution-1.js';
+// import { RecentCounter } from './solution-1.js';
+import { RecentCounter } from './solution-2.js';
 
 describe('`RecentCounter.ping()`', () => {
   it('should work as expected', () => {

@@ -1,4 +1,5 @@
-import { predictPartyVictory } from './solution-1.js';
+// import { predictPartyVictory } from './solution-1.js';
+import { predictPartyVictory } from './solution-2.js';
 
 describe('`predictPartyVictory()`', () => {
   it('should return `Radiant`, when there is only a single `R` in the senate', () => {

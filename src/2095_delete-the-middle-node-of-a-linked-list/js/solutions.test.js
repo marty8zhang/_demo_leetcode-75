@@ -1,5 +1,6 @@
 import { ListNode } from './list-node.js';
-import { deleteMiddle } from './solution-1.js';
+// import { deleteMiddle } from './solution-1.js';
+import { deleteMiddle } from './solution-2.js';
 
 describe('`deleteMiddle()`', () => {
   it('should return `null`, when there is only one node in the linked list', () => {

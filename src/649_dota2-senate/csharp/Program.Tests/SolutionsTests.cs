@@ -7,50 +7,50 @@ public class SolutionsTests
     [Fact]
     public void GivenASingleR_WhenPredictingVictory_ThenReturnsRadiant()
     {
-        SolutionTwo.PredictPartyVictory("R").Should().Be("Radiant");
+        SolutionThree.PredictPartyVictory("R").Should().Be("Radiant");
     }
 
     [Fact]
     public void GivenASingleD_WhenPredictingVictory_ThenReturnsDire()
     {
-        SolutionTwo.PredictPartyVictory("D").Should().Be("Dire");
+        SolutionThree.PredictPartyVictory("D").Should().Be("Dire");
     }
 
     [Fact]
     public void GivenOnlyRs_WhenPredictingVictory_ThenReturnsRadiant()
     {
-        SolutionTwo.PredictPartyVictory("RR").Should().Be("Radiant");
+        SolutionThree.PredictPartyVictory("RR").Should().Be("Radiant");
     }
 
     [Fact]
     public void GivenOnlyDs_WhenPredictingVictory_ThenReturnsDire()
     {
-        SolutionTwo.PredictPartyVictory("DDD").Should().Be("Dire");
+        SolutionThree.PredictPartyVictory("DDD").Should().Be("Dire");
     }
 
     [Fact]
     public void GivenRsOutnumberDs_WhenPredictingVictory_ThenReturnsRadiant()
     {
-        SolutionTwo.PredictPartyVictory("DRR").Should().Be("Radiant");
+        SolutionThree.PredictPartyVictory("DRR").Should().Be("Radiant");
     }
 
     [Fact]
     public void GivenDsOutNumberRs_WhenPredictingVictory_ThenReturnsDire()
     {
-        SolutionTwo.PredictPartyVictory("RDDRD").Should().Be("Dire");
+        SolutionThree.PredictPartyVictory("RDDRD").Should().Be("Dire");
     }
 
     [Fact]
     public void
         GivenDsOutnumberRsButRsCastVotesFirst_WhenPredictingVictory_ThenReturnsRadiant()
     {
-        SolutionTwo.PredictPartyVictory("RRDDD").Should().Be("Radiant");
+        SolutionThree.PredictPartyVictory("RRDDD").Should().Be("Radiant");
     }
 
     [Fact]
     public void
         GivenRsOutNumberDsButDsCastVotesFirst_WhenPredictingVictory_ThenReturnsDire()
     {
-        SolutionTwo.PredictPartyVictory("DRDRR").Should().Be("Dire");
+        SolutionThree.PredictPartyVictory("DRDRR").Should().Be("Dire");
     }
 }

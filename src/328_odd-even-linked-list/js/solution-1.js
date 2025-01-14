@@ -4,20 +4,18 @@ export function oddEvenList(head) {
 
   let oddPointer = head;
   let evenPointer = evenHead;
-  while (oddPointer?.next?.next) {
+  while (evenPointer?.next) {
     oddPointer.next = oddPointer.next.next;
     oddPointer = oddPointer.next;
-
-    if (evenPointer?.next?.next) {
-      evenPointer.next = evenPointer.next.next;
-      evenPointer = evenPointer.next;
-    } else {
-      // It's the last even-indexed node.
-      evenPointer.next = null;
-    }
+    /*
+     * By removing `?? null` at the end can further improve performance, but
+     * `evenPointer.next` might end up with `undefined` rather than `null`.
+     */
+    evenPointer.next = evenPointer.next?.next ?? null;
+    evenPointer = evenPointer.next;
   }
 
-  // Attach the even-indexed nodes to the end of odd-indexed nodes.
+  /* Attach the even-indexed nodes to the end of odd-indexed nodes. */
   oddPointer.next = evenHead;
 
   return head;

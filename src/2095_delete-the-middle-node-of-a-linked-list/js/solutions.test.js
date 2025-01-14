@@ -1,4 +1,4 @@
-import { ListNode } from './list-node.js';
+import { ListNode } from '../../libraries/list-node.js';
 // import { deleteMiddle } from './solution-1.js';
 import { deleteMiddle } from './solution-2.js';
 

@@ -1,4 +1,4 @@
-import { ListNode } from './list-node.js';
+import { ListNode } from '../../libraries/list-node.js';
 
 /*
  * This solution uses a two-pointer technique to achieve a single traversal of

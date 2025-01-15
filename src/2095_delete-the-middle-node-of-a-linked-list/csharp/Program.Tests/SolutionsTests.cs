@@ -1,6 +1,7 @@
 namespace Program.Tests;
 
 using FluentAssertions;
+using Utility;
 
 public class SolutionsTests
 {

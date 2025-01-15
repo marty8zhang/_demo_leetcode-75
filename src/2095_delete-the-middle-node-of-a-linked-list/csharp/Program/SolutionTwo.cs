@@ -1,4 +1,6 @@
-﻿public class SolutionTwo
+﻿using Utility;
+
+public class SolutionTwo
 {
     public static ListNode? DeleteMiddle(ListNode head)
     {

@@ -16,8 +16,8 @@ export function goodNodes(root) {
       count++;
       maxValue = node.val;
     }
-    count += traverseAndCount(node?.left, maxValue);
-    count += traverseAndCount(node?.right, maxValue);
+    count += traverseAndCount(node.left, maxValue);
+    count += traverseAndCount(node.right, maxValue);
 
     return count;
   }

@@ -1,5 +1,6 @@
 // import { goodNodes } from './solution-1.js';
-import { goodNodes } from './solution-2.js';
+// import { goodNodes } from './solution-2.js';
+import { goodNodes } from './solution-3.js';
 import { TreeNode } from '../../libraries/tree-node.js';
 
 describe('`goodNodes()`', () => {

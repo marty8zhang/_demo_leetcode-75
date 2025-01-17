@@ -1,5 +1,6 @@
 import { TreeNode } from '../../libraries/tree-node.js';
-import { maxLevelSum } from './solution-1.js';
+// import { maxLevelSum } from './solution-1.js';
+import { maxLevelSum } from './solution-2.js';
 
 describe('`maxLevelSum()`', () => {
   it('should return `1`, when there is only one node on the binary tree', () => {

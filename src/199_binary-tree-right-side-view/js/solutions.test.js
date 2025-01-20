@@ -1,5 +1,5 @@
-import { rightSideView } from './solution-1.js';
 import { TreeNode } from '../../libraries/tree-node.js';
+import { rightSideView } from './solution-1.js';
 
 describe('`rightSideView()`', () => {
   it('should return an empty array, when there is no node', () => {

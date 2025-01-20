@@ -1,5 +1,5 @@
-import { maxDepth } from './solution-1.js';
 import { TreeNode } from '../../libraries/tree-node.js';
+import { maxDepth } from './solution-1.js';
 
 describe('`maxDepth()`', () => {
   it('should return `0`, when there is no node', () => {

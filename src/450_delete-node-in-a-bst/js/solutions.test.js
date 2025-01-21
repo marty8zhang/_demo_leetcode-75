@@ -18,7 +18,6 @@ describe('`deleteNode()`', () => {
 
     const result = deleteNode(root, 11);
 
-    expect(result).toBe(leftNode);
     expect(convertToArray(result)).toStrictEqual([-100000, null, 100000]);
   });
 
@@ -28,7 +27,6 @@ describe('`deleteNode()`', () => {
 
     const result = deleteNode(root, 11);
 
-    expect(result).toBe(rightNode);
     expect(convertToArray(result)).toStrictEqual([100000]);
   });
 
@@ -87,7 +85,6 @@ describe('`deleteNode()`', () => {
 
     const result = deleteNode(root, 11);
 
-    expect(result).toBe(secondLeaf);
     expect(convertToArray(result)).toStrictEqual([
       1,
       0,
@@ -95,6 +92,28 @@ describe('`deleteNode()`', () => {
       -1,
       null,
       99,
+      101,
+    ]);
+  });
+
+  it('should return the expected result, when it is a 3-level BST, and a leaf needs to be deleted', () => {
+    const firstLeaf = new TreeNode(-1);
+    const secondLeaf = new TreeNode(1);
+    const thirdLeaf = new TreeNode(99);
+    const fourthLeaf = new TreeNode(101);
+    const leftNode = new TreeNode(0, firstLeaf, secondLeaf);
+    const rightNode = new TreeNode(100, thirdLeaf, fourthLeaf);
+    const root = new TreeNode(11, leftNode, rightNode);
+
+    const result = deleteNode(root, 99);
+
+    expect(convertToArray(result)).toStrictEqual([
+      11,
+      0,
+      100,
+      -1,
+      1,
+      null,
       101,
     ]);
   });

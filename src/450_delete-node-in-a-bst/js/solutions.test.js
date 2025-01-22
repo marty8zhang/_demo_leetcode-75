@@ -1,5 +1,6 @@
 import { TreeNode } from '../../libraries/tree-node.js';
-import { deleteNode } from './solution-1.js';
+// import { deleteNode } from './solution-1.js';
+import { deleteNode } from './solution-2.js';
 
 describe('`deleteNode()`', () => {
   it('should return `null`, when there is no node', () => {

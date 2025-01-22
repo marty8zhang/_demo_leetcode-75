@@ -96,7 +96,7 @@ describe('`deleteNode()`', () => {
     ]);
   });
 
-  it('should return the expected result, when it is a 3-level BST, and a leaf needs to be deleted', () => {
+  it('should return the expected result, when it is a 3-level BST, and the third leaf needs to be deleted', () => {
     const firstLeaf = new TreeNode(-1);
     const secondLeaf = new TreeNode(1);
     const thirdLeaf = new TreeNode(99);
@@ -115,6 +115,38 @@ describe('`deleteNode()`', () => {
       1,
       null,
       101,
+    ]);
+  });
+
+  it('should return the expected result, when it is a 3-level BST, and the fourth leaf needs to be deleted', () => {
+    const root = convertToTree([5, 3, 6, 2, 4, null, 7]);
+
+    const result = deleteNode(root, 7);
+
+    expect(convertToArray(result)).toStrictEqual([5, 3, 6, 2, 4, null, null]);
+  });
+
+  it('should return the expected result, when it is a 4-level BST, and it only has the right branch', () => {
+    const root = convertToTree([4, null, 7, 6, 8, 5, null, null, 9]);
+
+    const result = deleteNode(root, 7);
+
+    expect(convertToArray(result)).toStrictEqual([
+      4,
+      null,
+      6,
+      null,
+      null,
+      5,
+      8,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      9,
     ]);
   });
 });
@@ -138,4 +170,43 @@ function convertToArray(bstRoot) {
   }
 
   return result;
+}
+
+/*
+ * Using values provided by LeetCode. Note that the values are in a format that
+ * if a parent node does not exist, all `null` values of its non-existing child
+ * nodes won't be provided in the array. Hence, `if (!parent) continue;`. This
+ * is different than `convertToArray()`.
+ */
+function convertToTree(values) {
+  if (!values?.length) return null;
+
+  const root = new TreeNode(values.shift());
+  const parents = [root];
+
+  while (values.length) {
+    const numberOfParents = parents.length;
+    for (let i = 0; i < numberOfParents; i++) {
+      const parent = parents.shift();
+      if (!parent) continue;
+
+      const leftValue = values.shift();
+      const rightValue = values.shift();
+      const left =
+        leftValue === null || leftValue === undefined
+          ? null
+          : new TreeNode(leftValue);
+      const right =
+        rightValue === null || rightValue === undefined
+          ? null
+          : new TreeNode(rightValue);
+
+      parent.left = left;
+      parent.right = right;
+      parents.push(left);
+      parents.push(right);
+    }
+  }
+
+  return root;
 }

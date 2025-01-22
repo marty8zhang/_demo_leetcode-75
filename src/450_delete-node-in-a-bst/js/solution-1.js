@@ -1,6 +1,3 @@
-/*
- * Note: This solution fails the LeetCode performance check.
- */
 export function deleteNode(root, key) {
   if (!root) return null;
 
@@ -18,7 +15,7 @@ export function deleteNode(root, key) {
 
       if (val !== key) {
         if (left) queue.push({ node: left, parent: node, isLeft: true });
-        if (right) queue.push({ node: right, parent: node, isLeft: true });
+        if (right) queue.push({ node: right, parent: node, isLeft: false });
 
         continue;
       }
@@ -30,7 +27,9 @@ export function deleteNode(root, key) {
         } else {
           const replacingNodeInfo = retrieveBSTMaxValueNodeDetails(left);
           node.val = replacingNodeInfo.node.val;
-          replacingNodeInfo.parent.right = replacingNodeInfo.node.left;
+          if (replacingNodeInfo.parent)
+            replacingNodeInfo.parent.right = replacingNodeInfo.node.left;
+          else node.left = replacingNodeInfo.node.left;
         }
       } else if (right) {
         if (!right.left && !right.right) {
@@ -39,7 +38,9 @@ export function deleteNode(root, key) {
         } else {
           const replacingNodeInfo = retrieveBSTMinValueNodeDetails(right);
           node.val = replacingNodeInfo.node.val;
-          replacingNodeInfo.parent.left = replacingNodeInfo.node.right;
+          if (replacingNodeInfo.parent)
+            replacingNodeInfo.parent.left = replacingNodeInfo.node.right;
+          else node.right = replacingNodeInfo.node.right;
         }
       } else {
         if (!parent) return null;
@@ -63,7 +64,7 @@ function retrieveBSTMaxValueNodeDetails(node) {
 
   while (current.right) {
     parent = current;
-    current = node.right;
+    current = current.right;
   }
 
   return {
@@ -78,7 +79,7 @@ function retrieveBSTMinValueNodeDetails(node) {
 
   while (current.left) {
     parent = current;
-    current = node.left;
+    current = current.left;
   }
 
   return {

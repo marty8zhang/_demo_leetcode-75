@@ -1,5 +1,6 @@
 import { HUNDRED_BY_HUNDRED_NO_EXIT_MAZE } from './fixtures/hundred-by-hundred-no-exit-maze.js';
-import { nearestExit } from './solution-1.js';
+// import { nearestExit } from './solution-1.js';
+import { nearestExit } from './solution-1.1.js';
 
 describe('`nearestExit()`', () => {
   it('should return `-1`, when there is only the entrance cell in the maze', () => {

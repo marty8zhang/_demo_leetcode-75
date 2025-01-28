@@ -1,5 +1,6 @@
 // import { SmallestInfiniteSet } from './solution-1.js';
-import { SmallestInfiniteSet } from './solution-2.js';
+// import { SmallestInfiniteSet } from './solution-2.js';
+import { SmallestInfiniteSet } from './solution-3.js';
 
 describe('`SmallestInfiniteSet()`', () => {
   it('should work as expected', () => {

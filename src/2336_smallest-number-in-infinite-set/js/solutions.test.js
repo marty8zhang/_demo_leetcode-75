@@ -1,6 +1,8 @@
+import { LEETCODE_114 } from './fixtures/leetcode-114.js';
 // import { SmallestInfiniteSet } from './solution-1.js';
 // import { SmallestInfiniteSet } from './solution-2.js';
-import { SmallestInfiniteSet } from './solution-3.js';
+// import { SmallestInfiniteSet } from './solution-3.js';
+import { SmallestInfiniteSet } from './solution-4.js';
 
 describe('`SmallestInfiniteSet()`', () => {
   it('should work as expected', () => {
@@ -39,5 +41,15 @@ describe('`SmallestInfiniteSet()`', () => {
     smallestInfiniteSet.addBack(5);
     smallestInfiniteSet.addBack(6);
     smallestInfiniteSet.addBack(7);
+  });
+
+  it('should work as expected, when popping and adding randomly', () => {
+    const smallestInfiniteSet = new SmallestInfiniteSet();
+
+    for (let i = 1; i < LEETCODE_114[0].length; i++) {
+      if (LEETCODE_114[0][i] === 'popSmallest')
+        expect(smallestInfiniteSet.popSmallest()).toBe(LEETCODE_114[2][i]);
+      else smallestInfiniteSet.addBack(LEETCODE_114[1][i][0]);
+    }
   });
 });

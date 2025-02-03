@@ -4,7 +4,8 @@ import {
   FIXTURE_LEETCODE_51_SPELLS,
   FIXTURE_LEETCODE_51_SUCCESS,
 } from './fixtures/leetcode-51.js';
-import { successfulPairs } from './solution-1.js';
+// import { successfulPairs } from './solution-1.js';
+import { successfulPairs } from './solution-2.js';
 
 describe('`successfulPairs()`', () => {
   it('should return the expected results, when there is only one spell', () => {
@@ -13,7 +14,7 @@ describe('`successfulPairs()`', () => {
 
   it('should return the expected results, when there are multiple spells', () => {
     expect(successfulPairs([7, 1, 3, 24], [3, 7, 6, 23, 1], 24)).toStrictEqual([
-      3, 0, 1, 5
+      3, 0, 1, 5,
     ]);
   });
 

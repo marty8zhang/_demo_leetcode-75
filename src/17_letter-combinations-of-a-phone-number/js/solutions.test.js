@@ -1,4 +1,5 @@
-import { letterCombinations } from './solution-1.js';
+// import { letterCombinations } from './solution-1.js';
+import { letterCombinations } from './solution-2.js';
 
 describe('`letterCombinations()`', () => {
   it('should return an empty array, when no digit is given', () => {

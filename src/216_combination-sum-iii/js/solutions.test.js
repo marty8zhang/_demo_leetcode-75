@@ -1,4 +1,5 @@
-import { combinationSum3 } from './solution-1.js';
+// import { combinationSum3 } from './solution-1.js';
+import { combinationSum3 } from './solution-2.js';
 
 describe('`combinationSum3()`', () => {
   it('should return an empty array, when `n` is less than `3`', () => {

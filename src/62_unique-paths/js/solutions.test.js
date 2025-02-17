@@ -1,4 +1,5 @@
-import { uniquePaths } from './solution-1.js';
+// import { uniquePaths } from './solution-1.js';
+import { uniquePaths } from './solution-2.js';
 
 describe('`uniquePaths()`', () => {
   it('should return `1`, when both `m` and `n` are `1`', () => {

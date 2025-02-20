@@ -1,4 +1,5 @@
-import { Trie } from './solution-1.js';
+// import { Trie } from './solution-1.js';
+import { Trie } from './solution-2.js';
 
 describe('`Trie()`', () => {
   it('should work as expected', () => {
@@ -7,6 +8,7 @@ describe('`Trie()`', () => {
     trie.insert('apple');
 
     expect(trie.search('apple')).toBeTruthy();
+    expect(trie.startsWith('apple')).toBeTruthy();
     expect(trie.search('app')).toBeFalsy();
     expect(trie.startsWith('app')).toBeTruthy();
 

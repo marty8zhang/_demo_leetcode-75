@@ -1,4 +1,5 @@
-import { countBits } from './solution-1.js';
+// import { countBits } from './solution-1.js';
+import { countBits } from './solution-1.1.js';
 
 describe('`countBits()`', () => {
   it('should return `[0]`, when `n` is `0`', () => {

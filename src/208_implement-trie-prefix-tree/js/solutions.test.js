@@ -1,5 +1,6 @@
 // import { Trie } from './solution-1.js';
-import { Trie } from './solution-2.js';
+// import { Trie } from './solution-2.js';
+import { Trie } from './solution-3.js';
 
 describe('`Trie()`', () => {
   it('should work as expected', () => {

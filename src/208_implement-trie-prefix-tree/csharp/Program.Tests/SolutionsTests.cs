@@ -7,19 +7,28 @@ public class SolutionsTests
     [Fact]
     public void GivenTrie_WhenCalling_ThenReturnsExpectedResults()
     {
-        var trie = new SolutionTwo.Trie();
+        var trieTwo = new SolutionTwo.Trie();
+        var trieThree = new SolutionThree.Trie();
 
-        trie.Insert("apple");
+        trieTwo.Insert("apple");
+        trieThree.Insert("apple");
 
-        trie.Search("apple").Should().BeTrue();
-        trie.StartsWith("apple").Should().BeTrue();
-        trie.Search("app").Should().BeFalse();
-        trie.StartsWith("app").Should().BeTrue();
+        trieTwo.Search("apple").Should().BeTrue();
+        trieTwo.StartsWith("apple").Should().BeTrue();
+        trieTwo.Search("app").Should().BeFalse();
+        trieTwo.StartsWith("app").Should().BeTrue();
+        trieThree.Search("apple").Should().BeTrue();
+        trieThree.StartsWith("apple").Should().BeTrue();
+        trieThree.Search("app").Should().BeFalse();
+        trieThree.StartsWith("app").Should().BeTrue();
 
-        trie.Insert("app");
+        trieTwo.Insert("app");
+        trieThree.Insert("app");
 
-        trie.Search("app").Should().BeTrue();
+        trieTwo.Search("app").Should().BeTrue();
+        trieThree.Search("app").Should().BeTrue();
 
-        trie.Insert("app");
+        trieTwo.Insert("app");
+        trieThree.Insert("app");
     }
 }

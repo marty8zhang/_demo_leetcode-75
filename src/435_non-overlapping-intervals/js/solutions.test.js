@@ -1,5 +1,6 @@
 // import { eraseOverlapIntervals } from './solution-1.js';
-import { eraseOverlapIntervals } from './solution-2.js';
+// import { eraseOverlapIntervals } from './solution-2.js';
+import { eraseOverlapIntervals } from './solution-2.1.js';
 
 describe('`eraseOverlapIntervals()`', () => {
   it('should return `0`, when no interval needs to be removed', () => {

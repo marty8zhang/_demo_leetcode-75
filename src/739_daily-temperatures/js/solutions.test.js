@@ -1,4 +1,5 @@
-import { dailyTemperatures } from './solution-1.js';
+// import { dailyTemperatures } from './solution-1.js';
+import { dailyTemperatures } from './solution-1.1.js';
 
 describe('`dailyTemperatures()`', () => {
   it('should return `[0]`, when there is only one temperature given', () => {
